@@ -1,0 +1,16 @@
+C:\Users\minec\source\repos\3x-plus-1\bin\Release\netcoreapp3.0\3x-plus-1.exe
+C:\Users\minec\source\repos\3x-plus-1\bin\Release\netcoreapp3.0\3x-plus-1.deps.json
+C:\Users\minec\source\repos\3x-plus-1\bin\Release\netcoreapp3.0\3x-plus-1.runtimeconfig.json
+C:\Users\minec\source\repos\3x-plus-1\bin\Release\netcoreapp3.0\3x-plus-1.runtimeconfig.dev.json
+C:\Users\minec\source\repos\3x-plus-1\bin\Release\netcoreapp3.0\3x-plus-1.dll
+C:\Users\minec\source\repos\3x-plus-1\bin\Release\netcoreapp3.0\3x-plus-1.pdb
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.csproj.AssemblyReference.cache
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\_3x_1.Form1.resources
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.csproj.GenerateResource.cache
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.AssemblyInfoInputs.cache
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.AssemblyInfo.cs
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.csproj.CoreCompileInputs.cache
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.dll
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.pdb
+C:\Users\minec\source\repos\3x-plus-1\obj\Release\netcoreapp3.0\3x-plus-1.genruntimeconfig.cache

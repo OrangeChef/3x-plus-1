@@ -30,7 +30,7 @@ namespace _3x_1
         private void InitializeComponent()
         {
             this.NumbersBox = new System.Windows.Forms.ListBox();
-            this.GoButton = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
             this.NumberUpDown = new System.Windows.Forms.NumericUpDown();
             this.CancelButton = new System.Windows.Forms.Button();
             this.IntervalUpDown = new System.Windows.Forms.NumericUpDown();
@@ -42,27 +42,32 @@ namespace _3x_1
             // 
             // NumbersBox
             // 
+            this.NumbersBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NumbersBox.FormattingEnabled = true;
             this.NumbersBox.ItemHeight = 15;
             this.NumbersBox.Location = new System.Drawing.Point(13, 13);
             this.NumbersBox.Name = "NumbersBox";
-            this.NumbersBox.Size = new System.Drawing.Size(676, 424);
+            this.NumbersBox.Size = new System.Drawing.Size(460, 439);
             this.NumbersBox.TabIndex = 0;
             this.NumbersBox.TabStop = false;
             // 
-            // GoButton
+            // StartButton
             // 
-            this.GoButton.Location = new System.Drawing.Point(694, 71);
-            this.GoButton.Name = "GoButton";
-            this.GoButton.Size = new System.Drawing.Size(93, 23);
-            this.GoButton.TabIndex = 2;
-            this.GoButton.Text = "Go!";
-            this.GoButton.UseVisualStyleBackColor = true;
-            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
+            this.StartButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.StartButton.Location = new System.Drawing.Point(478, 71);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(93, 23);
+            this.StartButton.TabIndex = 2;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // NumberUpDown
             // 
-            this.NumberUpDown.Location = new System.Drawing.Point(695, 13);
+            this.NumberUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberUpDown.Location = new System.Drawing.Point(479, 13);
             this.NumberUpDown.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -75,7 +80,8 @@ namespace _3x_1
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(693, 100);
+            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelButton.Location = new System.Drawing.Point(478, 100);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(93, 23);
             this.CancelButton.TabIndex = 3;
@@ -85,7 +91,8 @@ namespace _3x_1
             // 
             // IntervalUpDown
             // 
-            this.IntervalUpDown.Location = new System.Drawing.Point(694, 42);
+            this.IntervalUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.IntervalUpDown.Location = new System.Drawing.Point(478, 42);
             this.IntervalUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -103,16 +110,20 @@ namespace _3x_1
             // 
             // NumbersLabel
             // 
+            this.NumbersLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NumbersLabel.AutoSize = true;
-            this.NumbersLabel.Location = new System.Drawing.Point(696, 130);
+            this.NumbersLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NumbersLabel.Location = new System.Drawing.Point(479, 126);
             this.NumbersLabel.Name = "NumbersLabel";
-            this.NumbersLabel.Size = new System.Drawing.Size(13, 15);
+            this.NumbersLabel.Size = new System.Drawing.Size(84, 15);
             this.NumbersLabel.TabIndex = 4;
-            this.NumbersLabel.Text = "0";
+            this.NumbersLabel.Text = "Calculations: 0";
+            this.NumbersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(696, 413);
+            this.ExportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExportButton.Location = new System.Drawing.Point(480, 426);
             this.ExportButton.Name = "ExportButton";
             this.ExportButton.Size = new System.Drawing.Size(92, 23);
             this.ExportButton.TabIndex = 5;
@@ -124,15 +135,16 @@ namespace _3x_1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.NumbersLabel);
             this.Controls.Add(this.IntervalUpDown);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NumberUpDown);
-            this.Controls.Add(this.GoButton);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.NumbersBox);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "3x + 1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).EndInit();
@@ -145,7 +157,7 @@ namespace _3x_1
         #endregion
 
         private System.Windows.Forms.ListBox NumbersBox;
-        private System.Windows.Forms.Button GoButton;
+        private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.NumericUpDown NumberUpDown;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.NumericUpDown IntervalUpDown;

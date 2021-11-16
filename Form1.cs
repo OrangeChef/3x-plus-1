@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace _3x_1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
 
         private int num;
         private int interval;
-        private int iterations;
+        private int calculations;
         private int initial;
         private bool calculate = false;
 
@@ -36,7 +36,7 @@ namespace _3x_1
 
         private void NumberUpDown_ValueChanged(object sender, EventArgs e)
         {
-            GoButton.Enabled = NumberUpDown.Value > 0;
+            StartButton.Enabled = NumberUpDown.Value > 0;
         }
 
         private void IntervalUpDown_ValueChanged(object sender, EventArgs e)
@@ -46,15 +46,15 @@ namespace _3x_1
 
         private void GoButton_Click(object sender, EventArgs e)
         {
-            GoButton.Enabled = false;
+            StartButton.Enabled = false;
             CancelButton.Enabled = true;
             calculate = true;
 
             num = (int)NumberUpDown.Value;
             initial = num;
-            iterations = 0;
+            calculations = 0;
 
-            NumbersLabel.Text = iterations.ToString();
+            NumbersLabel.Text = calculations.ToString();
             NumbersBox.Items.Clear();
 
             Calculate();
@@ -81,10 +81,10 @@ namespace _3x_1
 
             num = Math.Abs(num);
 
-            iterations++;
+            calculations++;
             NumbersBox.Items.Add(num.ToString());
             NumbersBox.SelectedIndex = NumbersBox.Items.Count - 1;
-            NumbersLabel.Text = iterations.ToString();
+            NumbersLabel.Text = $"Calculations: {calculations}";
 
             if (num != (int)NumberUpDown.Value && num != 1)
             {
@@ -95,44 +95,24 @@ namespace _3x_1
 
             calculate = false;
             NumberUpDown.Enabled = true;
-            GoButton.Enabled = true;
+            StartButton.Enabled = true;
             ExportButton.Enabled = true;
+            CancelButton.Enabled = false;
 
-            MessageBox.Show("Finished!", "3x + 1");
+            MessageBox.Show($"Finished with {num} after {calculations} calculations.", "3x + 1");
         }
 
         private void Reset()
         {
             calculate = false;
             NumberUpDown.Enabled = true;
-            GoButton.Enabled = false;
+            StartButton.Enabled = false;
             ExportButton.Enabled = false;
             CancelButton.Enabled = false;
 
-            iterations = 0;
+            calculations = 0;
 
-            NumbersLabel.Text = iterations.ToString();
-        }
-
-        private void Wait(int milliseconds)
-        {
-            var timer1 = new System.Windows.Forms.Timer();
-            if (milliseconds == 0 || milliseconds < 0) return;
-
-            timer1.Interval = milliseconds;
-            timer1.Enabled = true;
-            timer1.Start();
-
-            timer1.Tick += (s, e) =>
-            {
-                timer1.Enabled = false;
-                timer1.Stop();
-            };
-
-            while (timer1.Enabled)
-            {
-                Application.DoEvents();
-            }
+            NumbersLabel.Text = "Calculations: 0";
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -159,6 +139,27 @@ namespace _3x_1
             catch (Exception err)
             {
                 MessageBox.Show(err.ToString());
+            }
+        }
+
+        private void Wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
             }
         }
     }
