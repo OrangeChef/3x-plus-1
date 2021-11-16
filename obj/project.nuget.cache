@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tRR5Sqtn3JHmr8eeRxaAZwNL0PrKDp50fUCUEZrhhpLafikkb1SJFKDqdxN4TxCTYy5y8epRdtNuiMH3gtaUBg==",
+  "dgSpecHash": "I80c8+xTQW70KmabqJUu6zNreF2HcslGwk43UCVQlTuiMO+AmgyCLNMZi8gD1FZ97R5xAIXwKsAvNtRhGN2/0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\minec\\source\\repos\\3x+1\\3x+1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\minec\\source\\repos\\3x-plus-1\\3x-plus-1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\minec\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
   "logs": []
 }
